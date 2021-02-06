@@ -1,4 +1,4 @@
-# Under-valued Housing Price
+# Undervalued Housing Price
 
 ### A description of the problem and a discussion of the background
 
