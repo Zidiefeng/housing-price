@@ -16,13 +16,7 @@ The relevant terms are explained as follows:
     ZIP Codes are used not only for tracking of mail, but also in gathering geographical statistics in the United States.
 
 - This analysis used Zillow Home Value Index (ZHVI) to represent actual `housing price` of a given month in a ZIP Code area.
-
-    According to [Zillow website](https://www.zillow.com/research/data/),
-
-    > Zillow Home Value Index (ZHVI): A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type.
-    It reflects the typical value for homes in the 35th to 65th percentile range.
-
-    > For example, if ZHVI was $400,000 in Seattle one month, that indicates that 50 percent of homes in the area are worth more than $400,000 and 50 percent are worth less (adjusting for seasonal fluctuations– e.g. prices tend to be low in December).
+The detailed definitation of ZHVI can be found in section Data Source 1 below.
 
 -  This analysis compares the venues (and maybe some other geographical statistics) of a ZIP Code area with the current housing price of that area.
 A machine learning model would be built given the housing price and the geographical distribution of venues in that area.
@@ -33,9 +27,32 @@ An area would be identified as `undervalued` if the actual housing price is much
 
 ### A description of the data and how it will be used to solve the problem
 
-#### Data Source 1:
+#### Data Source 1: [ZHVI dataset](https://www.zillow.com/research/data/)
 
-#### Data Source 2:
+According to [Zillow website](https://www.zillow.com/research/data/),
+
+> Zillow Home Value Index (ZHVI): A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type.
+It reflects the typical value for homes in the 35th to 65th percentile range.
+
+> For example, if ZHVI was $400,000 in Seattle one month, that indicates that 50 percent of homes in the area are worth more than $400,000 and 50 percent are worth less (adjusting for seasonal fluctuations– e.g. prices tend to be low in December).
+
+This dataset stores housing price (Zillow Home Value Index) data:
+
+- for a period from Jan 1996 to Dec 2020
+- for 30,330 ZIP Code areas
+- monthly data are provided
+
+This dataset is used in the following ways:
+
+- The analysis will use the most recent monthly housing price (Dec 2020) to represent the current housing price.
+- The location information including ZIP Code, city name, and state name would be used as location input to Foursquare API to pull venue data.
+
+
+#### Data Source 2: [Foursquare](https://foursquare.com/)
+
+Foursquare is an independent location data platform that provides [place API](https://developer.foursquare.com/docs/api-reference/venues/search/).
+
+This data source is used to get venue distribution of a given ZIP Code area.
 
 
 
