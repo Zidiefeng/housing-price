@@ -1,8 +1,8 @@
 # Undervalued Housing Price
 
-### A description of the problem and a discussion of the background
+## Introduction / Business Problem 
 
-#### Background & Intent
+This section provides a description of the problem and a discussion of the background.
 
 The intent of this project is to identify areas with undervalued housing price in the United States.
 The relevant terms are explained as follows:
@@ -25,9 +25,11 @@ An area would be identified as `undervalued` if the actual housing price is much
 
 
 
-### A description of the data and how it will be used to solve the problem
+## Data
 
-#### Data Source 1: [ZHVI dataset](https://www.zillow.com/research/data/)
+This section provides a description of the data and how it will be used to solve the problem.
+
+### Data Source 1: [ZHVI dataset](https://www.zillow.com/research/data/)
 
 According to [Zillow website](https://www.zillow.com/research/data/),
 
@@ -48,7 +50,7 @@ This dataset is used in the following ways:
 - The location information including ZIP Code, city name, and state name would be used as location input to Foursquare API to pull venue data.
 
 
-#### Data Source 2: [Foursquare](https://foursquare.com/)
+### Data Source 2: [Foursquare](https://foursquare.com/)
 
 Foursquare is an independent location data platform that provides [place API](https://developer.foursquare.com/docs/api-reference/venues/search/).
 
@@ -61,8 +63,8 @@ This data source is used to get venue distribution of a given ZIP Code area.
 
 
 
------
 
+# Others
 
 1. A link to your Notebook on your Github repository, showing your code. (15 marks)
 
